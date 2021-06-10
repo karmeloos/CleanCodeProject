@@ -21,11 +21,12 @@ public class Order {
     private final List<Item> items;
     private final BigDecimal deliveryCost;
     private OrderStatus status;
+    //TODO:: Obliczanie kosztu orderu
 
     public Order(UUID customerId, boolean discount, List<Item> items, BigDecimal deliveryCost) {
         this.id = UUID.randomUUID();
         this.customerId = requireNonNull(customerId);
-        this.discount = requireNonNull(discount);
+        this.discount = discount;
         this.items = checkItemList(items);
         this.deliveryCost = checkDeliveryCost(deliveryCost);
         this.orderTime = LocalDateTime.now();
