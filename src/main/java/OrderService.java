@@ -30,9 +30,10 @@ public class OrderService {
 
     private BigDecimal calculateDeliveryCost(List<Item> items) {
         //TODO::
-        return null;
+        throw new UnsupportedOperationException("Not implemented yet");
     }
     private void sentEmail(String email, String header, String massage){
         //TODO::
+        throw new UnsupportedOperationException("Not implemented yet");
     }
 }

@@ -1,5 +1,7 @@
+import jdk.jshell.spi.ExecutionControl;
+
 public class Customer {
     public String getEmail() {
-        return null;
+        throw new UnsupportedOperationException("Not implemented yet");
     }
 }
