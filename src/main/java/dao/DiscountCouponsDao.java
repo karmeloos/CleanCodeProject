@@ -1,3 +1,7 @@
+package dao;
+
+import model.Coupon;
+
 import java.util.UUID;
 
 public class DiscountCouponsDao {

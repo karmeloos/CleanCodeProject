@@ -1,3 +1,5 @@
+package model;
+
 import jdk.jshell.spi.ExecutionControl;
 
 public class Customer {

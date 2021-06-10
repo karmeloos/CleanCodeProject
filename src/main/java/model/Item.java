@@ -1,3 +1,5 @@
+package model;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import static java.util.Objects.requireNonNull;

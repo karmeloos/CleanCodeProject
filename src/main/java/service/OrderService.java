@@ -1,3 +1,9 @@
+package service;
+
+import dao.CustomerDao;
+import dao.DiscountCouponsDao;
+import dao.OrderDao;
+import model.*;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -23,6 +29,7 @@ public class OrderService {
         BigDecimal deliveryCost = calculateDeliveryCost(items);
         Order order = new Order(customerId, hasDiscount, items, deliveryCost);
         this.orderDao.save(order);
+        //TODO: Usunięcie Kuponu z listy
         sentEmail(customer.getEmail()
                 , "Your order is placed!"
                 , "Thanks for ordering our products. Your order will be send very soon!");
@@ -33,6 +40,10 @@ public class OrderService {
         throw new UnsupportedOperationException("Not implemented yet");
     }
     private void sentEmail(String email, String header, String massage){
+        //TODO::
+        throw new UnsupportedOperationException("Not implemented yet");
+    }
+    public void updateOrderStatus(UUID orderId, OrderStatus status) {
         //TODO::
         throw new UnsupportedOperationException("Not implemented yet");
     }

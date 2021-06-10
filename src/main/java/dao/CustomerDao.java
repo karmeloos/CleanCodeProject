@@ -1,3 +1,7 @@
+package dao;
+
+import model.Customer;
+
 import java.util.UUID;
 
 public class CustomerDao {
