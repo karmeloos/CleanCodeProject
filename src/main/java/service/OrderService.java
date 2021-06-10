@@ -26,8 +26,7 @@ public class OrderService {
         Customer customer = customerDao.findById(customerId);
         Coupon coupon = couponsDao.findById(couponId);
         boolean hasDiscount = coupon != null;
-        BigDecimal deliveryCost = calculateDeliveryCost(items);
-        Order order = new Order(customerId, hasDiscount, items, deliveryCost);
+        Order order = new Order(customerId, hasDiscount, items);
         this.orderDao.save(order);
         //TODO: Usunięcie Kuponu z listy
         sentEmail(customer.getEmail()
@@ -35,10 +34,6 @@ public class OrderService {
                 , "Thanks for ordering our products. Your order will be send very soon!");
     }
 
-    private BigDecimal calculateDeliveryCost(List<Item> items) {
-        //TODO::
-        throw new UnsupportedOperationException("Not implemented yet");
-    }
     private void sentEmail(String email, String header, String massage){
         //TODO::
         throw new UnsupportedOperationException("Not implemented yet");
